@@ -1,12 +1,12 @@
 name: Deploy Contoso_University_Core
 
 on:
-   workflow_run:
+  workflow_run:
     workflows: ["Pack Contoso_University_Core"]
     branches: [main]
     types:
       - completed
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   deploy:
