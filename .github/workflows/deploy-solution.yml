@@ -15,13 +15,13 @@ jobs:
     environment: production
 
 steps:
-   - uses: dawidd6/action-download-artifact@v2
+    - uses: dawidd6/action-download-artifact@v2
       with:
         workflow: pack-solution.yml
         name: packed-solution
     - uses: microsoft/powerplatform-actions/import-solution@v0
       with:
-        environment-url: https://org5c2f9805.crm.dynamics.com/
+        environment-url: https://org5c2f9805.crm.dynamics.com
         user-name: ${{ secrets.USERNAME }}
         password-secret: ${{ secrets.PASSWORD }}
         solution-file: contoso_university_core_managed.zip
